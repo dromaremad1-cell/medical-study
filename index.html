@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#78988f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Medical Study">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>Medical Study</title>
+<style>
+:root{--bg:#f4f1ea;--panel:#fffdf8;--line:#d8d0c3;--text:#2f3a43;--muted:#6c777c;--accent:#78988f;--soft:#edf4f1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:980px;margin:auto;padding:28px 18px 48px}.hero,.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:0 6px 22px rgba(60,50,40,.06)}
+.hero{padding:26px}.hero h1{font-size:clamp(2rem,6vw,3.6rem);margin:.1rem 0}.hero p{color:var(--muted);margin:.3rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:18px}
+.card{display:block;padding:20px;text-decoration:none;color:inherit}.tag{display:inline-block;background:var(--soft);border:1px solid #d4e0db;border-radius:999px;padding:4px 9px;font-size:.72rem;font-weight:800;color:#5d786f}
+.card h2{font-size:1.25rem;margin:.55rem 0 .25rem}.card p{font-size:.9rem;color:var(--muted);margin:0}.arrow{margin-top:14px;font-weight:800;color:#5d786f}
+.install{margin-top:18px;padding:14px 16px;border:1px dashed #b9c7c0;border-radius:14px;background:#f8fbf9;color:#53645d;font-size:.9rem}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:24px}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+  <div class="tag">iPad-ready • PWA</div>
+  <h1>Medical Study</h1>
+  <p>One home screen for the interactive lectures.</p>
+  <div class="install"><b>iPad:</b> open in Safari → Share → <b>Add to Home Screen</b>.</div>
+</section>
+<section class="grid">
+  <a class="card" href="./congenital-1.html"><span class="tag">CNS</span><h2>Congenital CNS 1</h2><p>Hydrocephalus & Craniostenosis</p><div class="arrow">Open lecture →</div></a>
+  <a class="card" href="./congenital-2.html"><span class="tag">CNS</span><h2>Congenital CNS 2</h2><p>Craniosynostosis, spinal dysraphism & related topics</p><div class="arrow">Open lecture →</div></a>
+  <a class="card" href="./head-trauma-1.html"><span class="tag">Neurosurgery</span><h2>Head Trauma 1</h2><p>Assessment, GCS, skull fractures & herniation</p><div class="arrow">Open lecture →</div></a>
+  <a class="card" href="./head-trauma-2.html"><span class="tag">Neurosurgery</span><h2>Head Trauma 2</h2><p>Concussion, DAI, EDH, SDH & ICH</p><div class="arrow">Open lecture →</div></a>
+</section>
+<footer>Medical Study</footer>
+</main>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./service-worker.js');
+  });
+}
+</script>
+</body></html>
